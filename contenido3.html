@@ -2,9 +2,188 @@
 <body bgcolor="#34A5A2">
     <h2>Sistemas Operativos y Redes</h2>
     <p>
-        El soporte técnico 
-        es el servicio que las empresas ofrecen para responder las dudas de los clientes sobre el producto o servicio que adquirieron. De esta manera, pueden solucionar 
-        inconvenientes y aprovechar al máximo todos sus recursos.
+        <h2><i>Sistemas Operativos</h2></i>
+        <br>
+        Un sistema operativo es un programa que actúa como intermediario entre el usuario y el hardware de un computador y su propósito es proporcionar un entorno en el cual el usuario pueda ejecutar programas.
+        Una vez que la computadora ha puesto en marcha su SO, mantiene al menos parte de éste en su memoria en todo momento.
+        <ul>
+        • Proporcionar una interfaz de línea de comando o una interfaz gráfica al usuario.
+        <br>
+        • Administrar los dispositivos de hardware en la computadora.
+        <br>
+        • Administrar y mantener los sistemas de archivo de disco.
+        <br>
+        • Apoyar a otros programas.
+        </ul>
+        <br>
+        <h2><i>Clasificación</h2></i>
+        <br>
+        Sistemas Operativos de multiprogramación .
+        Soportan la ejecución de dos o más trabajos activos al mismo tiempo.
+        Sistemas Operativos de tiempo compartido.
+        Permiten la simulación de que el sistema y sus recursos son todos para cada usuarios. El usuario hace una petición a la computadora, esta la procesa tan pronto como le es posible, y la respuesta aparecerá en la terminal del usuario.
+        Sistemas Operativos distribuidos.
+        Permiten distribuir trabajos, tareas o procesos, entre un conjunto de procesadores. Puede ser que este conjunto de procesadores esté en un equipo o en diferentes, en este caso es trasparente para el usuario.
+        <br>
+        <h2><i>Existen dos esquemas básicos</h2></i>
+        <br>
+        <ul>
+        • Sistema fuertemente acoplado: comparte la memoria y un reloj global, cuyos tiempos de acceso son similares para todos los procesadores.
+        <br>
+        • Sistema débilmente acoplado: Los procesadores no comparten ni memoria ni reloj, ya que cada uno cuenta con su memoria local.
+        </ul>
+        <br>
+        Entre los diferentes Sistemas Operativos distribuidos que existen tenemos los siguientes: Sprite, Solaris-MC, Mach, Chorus, Spring, Amoeba, Taos, etc.
+        <br>
+        <h2><i>Características de los Sistemas Operativos distribuidos</h2></i>
+        <br>
+        <ul>
+        • Objetivo clave: La transparencia.
+        <br>
+        • Generalmente proporcionan medios para la compartición global de recursos.
+        </ul>
+        <br>
+        <h2><i>Conceptos de los sistemas distribuidos</h2></i>
+        <br>
+        Los sistemas distribuidos están basados en las ideas básicas de transparencia, eficiencia, flexibilidad, escalabilidad y fiabilidad. Sin embargo estos aspectos son en parte contrarios, y por lo tanto los sistemas distribuidos han de cumplir en su diseño el compromiso de que todos los puntos anteriores sean solucionados de manera aceptable.
+        <br>
+        <h2><i>Transparencia</h2></i>
+        <br>
+        Es la idea de que todo el sistema funcione de forma similar en todos los puntos de la red, independientemente de la posición del usuario.
+        En un sistema transparente, las diferentes copias de un archivo deben aparecer al usuario como un único archivo.
+        El que el sistema disponga de varios procesadores debe lograr un mayor rendimiento del sistema, pero el sistema operativo debe controlar que tanto los usuario como los programadores vean el núcleo del sistema distribuido como un único procesador.
+        <br>
+        <h2><i>Eficiencia</h2></i>
+        <br>
+        Para lograr un sistema eficiente hay que distribuir las tareas a los procesadores libres más rápidos en cada momento.
+        <br>
+        <h2><i>Flexibilidad</h2></i>
+        <br>
+        Un proyecto en desarrollo como el diseño de un sistema operativo distribuido debe estar abierto a cambios y actualizaciones que mejoren el funcionamiento del sistema.
+        <br>
+        <h2><i>Núcleo monolítico</h2></i>
+        <br>
+        Como ejemplo de sistema operativo de núcleo monolítico está UNIX. Estos sistemas tienen un núcleo grande y complejo, que engloba todos los servicios del sistema. Está programado de forma no modular, y tiene un rendimiento mayor que un micro núcleo. Sin embargo, cualquier cambio a realizar en cualquier servicio requiere la parada de todo el sistema y la recompilación del núcleo.
+        Se basa en una programación altamente modular, y monolítico.
+        Además, la actualización de los servicios es más recompilación del servicio y no de todo el núcleo.
+        afectado negativamente.
+        tiene un tamaño mucho menor que el núcleo control de errores son más rápidos y sencillos.
+        <br>
+        Como contraprestación, el rendimiento se ve
+        <br>
+        En la actualidad la mayoría de sistemas operativos distribuidos en desarrollo tienden a un diseño de micro núcleo. Los núcleos tienden a contener menos errores y a ser más fáciles de implementar y de corregir. El sistema pierde ligeramente en rendimiento, pero a cambio consigue un gran aumento de la flexibilidad.
+        <br>
+        <h2><i>Escalabilidad</h2></i>
+        <br>
+        Un sistema operativo distribuido debería funcionar tanto para una docena de ordenadores como varios millares. Igualmente, debería no ser determinante el tipo de red utilizada ni las distancias entre los equipos, etc.
+        <br>
+        <h2><i>Fiabilidad</h2></i>
+        <br>
+        Una de las ventajas claras que nos ofrece la idea de sistema distribuido es que el funcionamiento de todo el sistema no debe estar ligado a ciertas máquinas de la red, sino que cualquier equipo pueda suplir a otro en caso de que uno se estropee o falle.
+        La forma más evidente de lograr la fiabilidad de todo el sistema está en la redundancia. La información no debe estar almacenada en un solo servidor de archivos, sino en por lo menos dos máquinas.
+        Mediante la redundancia de los principales archivos o de todos evitamos el caso de que el fallo de un servidor bloquee todo el sistema, al tener una copia idéntica de los archivos en otro equipo.
+        Otro tipo de redundancia más compleja se refiere a los procesos. Las tareas críticas podrían enviarse a varios procesadores independientes, de forma que el primer procesador realizaría la tarea normalmente, pero ésta pasaría a ejecutarse en otro procesador si el primero hubiera fallado.
+        <br>
+        <h2><i>Comunicación</h2></i>
+        <br>
+        La comunicación entre procesos en sistemas con un único procesador se lleva a cabo mediante el uso de memoria compartida entre los procesos. En los sistemas distribuidos, al no haber conexión física entre las distintas memorias de los equipos, la comunicación se realiza mediante la transferencia de mensajes.
+        <br>
+        Para el envío de mensajes se usa el estándar OSI
+        <br>
+        <h2><i>Sistemas Operativos de red.</h2></i>
+        <br>
+        A un Sistema Operativo de Red se le conoce como NOS. Mantiene a dos o más computadoras unidas a través de algún medio de comunicación , con el objetivo primordial de poder compartir los diferentes recursos y la información del sistema.
+        Otra definición es la siguiente; es un software que rige y administra los recursos, archivos, periféricos, usuarios, etc., en una red y lleva el control de seguridad de los mismos.
+        Un NOS maneja los servicios necesarios para asegurar que el usuario final esté libre de error al acceder a la red. Un NOS normalmente provee una interfaz de usuario que es para reducir la complejidad y conflictos al momento de usar la red.
+        Dentro del contexto del Sistema Operativo de Red, se pueden escribir aplicaciones tales como un sistema de correo electrónico.
+        La principal función de un sistema operativo de red es ofrecer un mecanismo para transferir archivos de una máquina a otra. En este entorno, cada instalación mantiene su propio sistema de archivos local y si un usuario de la instalación A quiere acceder a un archivo en la instalación B, hay que copiar explícitamente el archivo de una instalación a otra.
+        Internet proporciona un mecanismo para estas transferencias, a través del programa protocolo de transferencias de archivos FTP .
+        La ubicación del archivo no es transparente para el usuario; tiene que saber exactamente donde esta cada archivo. Además los archivos no se comparten realmente, porque un usuario solo puede copiar un archivo de una instalación a otra. Por lo tanto pueden existir varias copias del mismo archivo, lo que representa un desperdicio de espacio. Así mismo, si se modifican, estas copias no serán consistentes.
+        El primer Sistema Operativo de red estaba enfocado a equipos con un procesador Motorola 6800, pasando posteriormente a procesadores Intel como Novell Netware.
+        Los Sistemas Operativos de red más ampliamente usados son: Novell Netware, Personal Netware, LAN Manager, Windows NT Server, UNIX, LANtastic.
+        Diferencia entre un S.O. Distribuido, un S.O. de Red
+        No hay que confundir un Sistema Operativo de Red con un Sistema Operativo Distribuido.
+        En un Sistema Operativo de Red las computadoras están interconectadas por medios de comunicación: software y hardware. Los usuarios saben de la existencia de varias computadoras y pueden conectarse con máquinas remotas y copiar archivos de una máquina a otra, cada máquina ejecuta su propio sistema operativo local y tiene su propio usuario o grupo de usuarios.
+        En cambio en los Sistemas Operativos Distribuidos existe un software que distribuye las tareas de los usuarios sobre una red de computadoras y para los usuarios es transparente donde realizan sus tareas y guardan su información.
+        Aparece ante sus usuarios como un sistema tradicional de un solo procesador, aun cuando esté compuesto por varios procesadores.
+        Además son sistemas autónomos capaces de comunicarse y cooperar entre sí para resolver tareas globales. Es indispensable el uso de redes para intercambiar datos. Además de los servicios típicos de un Sistema Operativo, un Sistema Distribuido debe gestionar la distribución de tareas entre los diferentes nodos conectados. También, debe proporcionar los mecanismos necesarios para compartir globalmente los recursos del sistema.
+        <br>
+        <h2><i>Seguridad en los Sistemas Operativos</h2></i>
+        <br>
+        Dependiendo de los mecanismos utilizados y de su grado de efectividad, se puede hablar de sistemas seguros e inseguros.
+        En la actualidad son muchas las violaciones que se producen en los sistemas informáticos, en general por acceso de personas no autorizadas que obtienen información confidencial pudiendo incluso manipularla. En ocasiones este tipo de incidencias resulta grave por la naturaleza de los datos; por ejemplo si se trata de datos bancarios, datos oficiales que puedan afectar a la seguridad de los estados, etc.
+        Software mal intencionado que se produce por diversas causas, es decir pequeños programas que poseen gran facilidad para reproducirse y ejecutarse, con efectos destructivos: virus informáticos.
+        Para esto, se analizan cuestiones de seguridad desde dos perspectivas diferentes: la seguridad externa y la seguridad interna.
+        <br>
+        <h2><i>Seguridad Externa</h2></i>
+        <br>
+        Engloba a todos los mecanismos dirigidos a asegurar el sistema informático sin que el propio sistema intervenga.
+        <br>
+        <h2><i>La seguridad externa puede dividirse en dos grandes grupos</h2></i>
+        <br>
+        <ul>
+        • Seguridad física. Engloba aquellos mecanismos que impiden a los agentes físicos la destrucción de la información existente en el sistema; entre ellos podemos citar el fuego, el humo, inundaciones descargas eléctricas, campos magnéticos, acceso físico de personas con no muy buena intención, entre otros.
+        <br>
+        • Seguridad de administración. Engloba los mecanismos más usuales para impedir el acceso lógico de personas físicas al sistema.
+        </ul>
+        <br>
+        <h2><i>Seguridad Interna</h2></i>
+        <br>
+        Engloba a todos los mecanismos dirigidos a asegurar el sistema informático, siendo el propio sistema el que controla dichos mecanismos.
+        <br>
+        <h2><i>Estructura de un sistema operativo</h2></i>
+        <br>
+        Cuatro estructuras distintas que ya han sido probadas, con el fin de tener una idea más extensa de cómo esta estructurado el sistema operativo.
+        Estructura modular.
+        También llamados sistemas monolíticos. La estructura consiste en que no existe estructura alguna. El sistema operativo se escribe como una colección de procedimientos, cada uno de los cuales puede llamar a los demás cada vez que así lo requiera.
+        Estructura por microkernel.
+        Las funciones centrales de un SO son controladas por el núcleo mientras que la interfaz del usuario es controlada por el entorno .
+        Por ejemplo, las funciones de bajo nivel del SO y las funciones de interpretación de comandos están separadas, de tal forma que puedes mantener el kernel DOS corriendo, pero utilizar una interfaz de usuario diferente. Esto es exactamente lo que sucede cuando cargas Microsoft Windows, el cual toma el lugar del Shell, reemplazando la interfaz de línea de comandos con una interfaz gráfica del usuario.
+        Existen muchos «shells» diferentes en el mercado, ejemplo: NDOS , XTG, PCTOOLS, o inclusive el mismo SO MS-DOS a partir de la versión 5.0 incluyó un Shell llamado DOS SHELL.
+        Estructura por anillos concéntricos .
+        El sistema por «capas» consiste en organizar el sistema operativo como una jerarquía de capas, cada una construida sobre la inmediata inferior.
+        THE , desarrollado en Holanda por E. W. Dijkstra y sus estudiantes.
+        <ul>
+        • La capa 1 realizaba la administración de la memoria.
+        <br>
+        • La capa 2 se encargaba de la comunicación entre cada proceso y la consola del operador.
+        </ul>
+        <br>
+        <h2><i>Estructura cliente – servidor</h2></i>
+        <br>
+        Una tendencia de los sistemas operativos modernos es mover el código a capas superiores y eliminar la mayor parte posible del sistema operativo para mantener un núcleo mínimo.
+        El punto de vista usual es implantar la mayoría de las funciones del sistema operativo en los procesos del usuario.
+        Para solicitar un servicio, como la lectura de un bloque de cierto archivo, un proceso del usuario envía la solicitud a un proceso servidor, que realiza entonces el trabajo y regresa la respuesta.
+        En este modelo, lo único que hace el núcleo es controlar la comunicación entre los clientes y los servidores.
+        Del proceso de la terminal...
+        <br>
+        Los clientes obtienen el servicio al enviar mensajes a los procesos servidores
+        <br>
+        Si un cliente se comunica con un servidor mediante mensajes, el cliente no necesita saber si el mensaje se maneja en forma local, en su máquina, o si se envía por medio de una red a un servidor en una máquina remota. En lo que respecta al cliente, lo mismo ocurre en ambos casos: se envió una solicitud y se recibió una respuesta.
+        <br>
+        <h2></i> UNIX</h2></i>
+        <br>
+        Es un sistema operativo multiusuario que incorpora multitarea. El sistema operativo UNIX esta escrito en lenguaje C. Está disponible en varias formas, entre las que se cuenta AIX, una versión de UNIX adaptada por IBM , A/ux y Mach .
+        El UNIX y sus clones permiten múltiples tareas y múltiples usuarios. Su sistema de archivos proporciona un método sencillo de organizar archivos y permite la protección de archivos. Sin embargo, las instrucciones del UNIX no son intuitivas.
+        En el año '71, Ritchie y Kernigham crean y utilizan el lenguaje C en un PDP-11 , lenguaje nacido para la programación de sistemas.
+        <br>
+        <h2><i>Orígenes</h2></i>
+        <br>
+        Thompson re-escriben su engendro en lenguaje C, pero esta vez desarrollan un sistema multiusuario.
+        UNIX había nacido. El sistema, nacido del trabajo y la ilusión de sólo dos hombres, demostró ser algo tan bueno que ese mismo año Bell Labs contaba con 25 instalaciones funcionando con UNIX.
+        1984 marca un nuevo hito en la historia de UNIX ya que SUN desarrolla los conceptos de RPC y NFS y los incorpora a SunOS.
+        Es uno de los más conocidos y aceptado como sistema operativo de red.
+        <br>
+        NFS: Network File System
+        <br>
+        <ul>
+        • Surgió para UNIX pero se amplió a otros S. O. .
+        <br>
+        • Soporta sistemas heterogéneos, por ej.: clientes de MS - DOS que hagan uso de servidores UNIX.
+        <br>
+        • Los equipos pueden ser también de hardware heterogéneo.
+        </ul>
     </p>
+    <i><p>Informacion sacada del archivo PDF: https://www.profesores.frc.utn.edu.ar/sistemas/ingsanchez/Redes/Archivos/SistOperatDeRed.pdf</p></i>
 </body>
 </html>
